@@ -67,7 +67,8 @@ const Parallax = () => {
         x: xPercent * 80,
         y: ypercent * 80,
         duration: 0.8,
-        ease: "power3.out"
+        ease: "power3.out",
+        overwrite: "auto"
       });
     };
 
