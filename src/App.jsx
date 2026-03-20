@@ -1,13 +1,11 @@
 
 import './App.css'
+import Parallax from './components/Parallax'
 
 function App() {
   
-  return (
-   <div>
-    <h1 className="text-3xl font-bold">hello</h1>
-   </div>
-  )
+  return <Parallax/>
+   
 }
 
 export default App
