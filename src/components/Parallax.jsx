@@ -52,19 +52,22 @@ const Parallax = () => {
       gsap.to(".bg-layer", {
         x: xPercent * 20,
         y: ypercent * 20,
-        duration: 0.5,
+        duration: 0.8,
+        ease: "power3.out"
       });
 
       gsap.to(".mid-layer", {
         x: xPercent * 40,
         y: ypercent * 40,
-        duration: 0.5,
+        duration: 0.8,
+        ease: "power3.out"
       });
 
       gsap.to(".front-layer", {
         x: xPercent * 80,
         y: ypercent * 80,
-        duration: 0.5,
+        duration: 0.8,
+        ease: "power3.out"
       });
     };
 
