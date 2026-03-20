@@ -9,6 +9,7 @@ const Parallax = () => {
 
         gsap.to(".bg-layer",{
             y: -100,
+            scale: 1.2,
             scrollTrigger: {
                 trigger: ".parallax-section",
                 start: "top center",
@@ -19,6 +20,7 @@ const Parallax = () => {
 
         gsap.to(".mid-layer",{
             y: -200,
+            scale: 1.1,
             scrollTrigger: {
                 trigger: ".parallax-section",
                 start: "top center",
@@ -29,6 +31,7 @@ const Parallax = () => {
 
         gsap.to(".front-layer",{
             y: -400,
+            scale: 0.9,
             scrollTrigger: {
                 trigger: ".parallax-section",
                 start: "top center",
