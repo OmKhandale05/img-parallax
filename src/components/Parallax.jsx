@@ -6,6 +6,13 @@ const Parallax = () => {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    gsap.from(".hero-text",{
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    });
+
     gsap.to(".bg-layer", {
       y: -100,
       scale: 1.2,
@@ -81,7 +88,7 @@ const Parallax = () => {
   return (
     <div className="bg-black text-white">
       <section className="h-screen flex items-center justify-center">
-        <h1 className="text-6xl font-bold">Welcome</h1>
+        <h1 className="hero-text text-6xl font-bold">Welcome</h1>
       </section>
 
       <section className="parallax-section h-[200vh] bg-black relative overflow-hidden flex items-center justify-center">
