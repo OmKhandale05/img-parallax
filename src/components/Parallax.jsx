@@ -3,7 +3,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 
 const Parallax = () => {
-  
+  const containerRef = useRef(null);
   const pinRef = useRef(null);
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -93,6 +93,19 @@ const Parallax = () => {
       }
     }
     );
+    const ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: pinRef.current,
+        start: "top 1%",
+        end: "+=1000",
+        pin: true,
+        pinSpacing: true,
+        pinType: "fixed",
+        markers: true
+      });
+
+    })
+   
 
     const handleMouseMove = (e) => {
       const x = e.clientX;
@@ -131,7 +144,7 @@ const Parallax = () => {
     }
   }, []);
   return (
-    <div className="bg-black text-white">
+    <div ref={containerRef} className="bg-black text-white">
       <section className="h-screen flex items-center justify-center">
         <h1 className="hero-text text-6xl font-bold">Welcome</h1>
       </section>
