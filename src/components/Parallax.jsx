@@ -19,6 +19,17 @@ const Parallax = () => {
       ease: "power3.out"
     });
 
+    gsap.to(".hero-text",{
+      y: -150,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".hero-text",
+        start: "top-center",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+
     gsap.to(".bg-layer", {
       y: -100,
       scale: 1.2,
