@@ -95,7 +95,7 @@ const Parallax = () => {
             end: "top 40%",
             scale: 0.8,
             scrub: true,
-            markers: true,
+    
           },
         }
       );
@@ -106,7 +106,7 @@ const Parallax = () => {
         end: "+=1000",
         pin: true,
         pinSpacing: true,
-        markers: true,
+
       });
 
       gsap.fromTo(
