@@ -1,10 +1,13 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 const Parallax = () => {
+  
+  const pinRef = useRef(null);
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    
 
     gsap.fromTo(".hero-text",
     {
@@ -155,6 +158,12 @@ const Parallax = () => {
 
         </div>
         
+      </section>
+      <section
+      ref={pinRef}
+      className="pin-section h-screen flex items-center justify-center bg-gray-900"
+      >
+        <h1 className="pin-text text-5xl font-bold">Focus</h1>
       </section>
       <section className="h-screen flex items-center justify-center">
         <h1 className="text-4xl">Get Started</h1>
