@@ -135,7 +135,20 @@ const Parallax = () => {
           end: "top 50%",
           scrub: true
         }
-      })
+      });
+
+      gsap.from(".cta-btn",
+      {
+        y: 50,
+        opacity: 0,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: ".cta",
+          start: "top 80%",
+          end: "top 50%",
+          scrub: true
+        }
+      });
     }, containerRef);
     ScrollTrigger.refresh();
 
@@ -209,8 +222,11 @@ const Parallax = () => {
       >
         <h1 className="pin-text text-5xl font-bold">Focus</h1>
       </section>
-      <section className=" cta h-screen flex items-center justify-center">
-        <h1 className=" cta-text text-4xl font-bold">Get Started</h1>
+      <section className=" cta h-screen flex flex-col items-center justify-center gap-6">
+        <h1 className=" cta-text text-4xl font-bold">Ready to Start?</h1>
+        <button className="cta-btn bg-white text-black px-6 py-3 rounded-full">
+          Get Started
+        </button>
       </section>
     </div>
   );
