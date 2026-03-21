@@ -132,21 +132,24 @@ const Parallax = () => {
         scrollTrigger: {
           trigger: ".cta",
           start: "top 80%",
-          end: "top 50%",
-          scrub: true
+          // end: "top 60%",
+          toggleActions: "play none none reverse",
+          scrub: false
         }
       });
 
-      gsap.from(".cta-btn",
+      gsap.fromTo(".cta-btn",
+      {y: 50, opacity: 0},
       {
-        y: 50,
-        opacity: 0,
+        y: 0,
+        opacity: 1,
         delay: 0.2,
         scrollTrigger: {
           trigger: ".cta",
           start: "top 80%",
-          end: "top 50%",
-          scrub: true
+          // end: "top 60%",
+          toggleActions: "play none none reverse",
+          scrub: false
         }
       });
     }, containerRef);
@@ -195,7 +198,7 @@ const Parallax = () => {
         <h1 className="hero-text text-6xl font-bold">Welcome</h1>
       </section>
 
-      <section className="parallax-section h-[200vh] bg-black relative overflow-hidden flex items-center justify-center">
+      <section className="parallax-section h-[200vh] bg-black relative flex items-center justify-center">
         <img
           src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
           className="bg-layer absolute w-full h-full object-cover z-0"
