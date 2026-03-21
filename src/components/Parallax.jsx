@@ -152,6 +152,13 @@ const Parallax = () => {
           scrub: false
         }
       });
+
+      gsap.to(".gradient-text",{
+        backgroundPosition:"200% center",
+        duration: 3,
+        repeat: -1,
+        ease: "linear"
+      });
     }, containerRef);
     ScrollTrigger.refresh();
 
@@ -226,7 +233,7 @@ const Parallax = () => {
         <h1 className="pin-text text-5xl font-bold">Focus</h1>
       </section>
       <section className=" cta h-screen flex flex-col items-center justify-center gap-6">
-        <h1 className=" cta-text text-4xl font-bold">Ready to Start?</h1>
+        <h1 className=" cta-text text-4xl font-bold gradient-text">Ready to Start?</h1>
         <button className="cta-btn bg-white text-black px-6 py-3 rounded-full">
           Get Started
         </button>

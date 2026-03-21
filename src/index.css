@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+.gradient-text{
+    background: linear-gradient(90deg, #ffffff, #999999, #ffffff);
+    background-size: 20% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
