@@ -123,6 +123,19 @@ const Parallax = () => {
           },
         }
       );
+
+      gsap.fromTo(".cta-text",
+      {y: 100, opacity: 0},
+      {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".cta",
+          start: "top 80%",
+          end: "top 50%",
+          scrub: true
+        }
+      })
     }, containerRef);
     ScrollTrigger.refresh();
 
@@ -196,8 +209,8 @@ const Parallax = () => {
       >
         <h1 className="pin-text text-5xl font-bold">Focus</h1>
       </section>
-      <section className="h-screen flex items-center justify-center">
-        <h1 className="text-4xl">Get Started</h1>
+      <section className=" cta h-screen flex items-center justify-center">
+        <h1 className=" cta-text text-4xl font-bold">Get Started</h1>
       </section>
     </div>
   );
