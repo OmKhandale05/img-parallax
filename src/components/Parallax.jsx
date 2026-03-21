@@ -41,7 +41,7 @@ const Parallax = () => {
       filter: "blur(4px)",
       scrollTrigger: {
         trigger: ".parallax-section",
-        start: "top center",
+        start: "top bottom",
         end: "bottom top",
         scrub: true,
       },
@@ -53,7 +53,7 @@ const Parallax = () => {
       filter: "blur(2px)",
       scrollTrigger: {
         trigger: ".parallax-section",
-        start: "top center",
+        start: "top bottom",
         end: "bottom top",
         scrub: true,
       },
@@ -65,7 +65,7 @@ const Parallax = () => {
       filter: "blur(0px)",
       scrollTrigger: {
         trigger: ".parallax-section",
-        start: "top center",
+        start: "top bottom",
         end: "bottom top",
         scrub: true,
       },
