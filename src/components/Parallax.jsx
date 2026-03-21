@@ -6,10 +6,16 @@ const Parallax = () => {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from(".hero-text",{
-      y: 100,
-      opacity: 0,
-      duration: 1,
+    gsap.fromTo(".hero-text",
+    {
+      y: 200,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 2,
+      delay: 1,
       ease: "power3.out"
     });
 
