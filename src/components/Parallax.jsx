@@ -81,10 +81,12 @@ const Parallax = () => {
       opacity: 1,
       stagger: 0.05,
       scrollTrigger: {
-        trigger: ".parallax-section",
-        start: "top center",
-        end: "top 20%",
-        scrub: true
+        trigger: ".front-layer",
+        start: "top 80%",
+        end: "top 40%",
+        scale: 0.8,
+        scrub: true,
+        markers: true
       }
     }
     );
@@ -142,13 +144,17 @@ const Parallax = () => {
           className="mid-layer absolute w-full -h-full object-cover opacity-70 z-10"
         />
 
-        <h1 className="front-layer text-6xl font-bold z-20 flex flex-wrap">
+        <div className="front-layer z-20">
+        <h1 className=" text-6xl font-bold flex flex-wrap justify-center">
           {"Explore".split("").map((char, i) => (
             <span key={i} className="char inline-block">
               {char}
             </span>
           ))}
         </h1>
+
+        </div>
+        
       </section>
       <section className="h-screen flex items-center justify-center">
         <h1 className="text-4xl">Get Started</h1>
