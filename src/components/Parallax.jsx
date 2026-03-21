@@ -71,6 +71,24 @@ const Parallax = () => {
       },
     });
 
+    gsap.fromTo(".char",
+    {
+      y: 100,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      scrollTrigger: {
+        trigger: ".parallax-section",
+        start: "top center",
+        end: "top 20%",
+        scrub: true
+      }
+    }
+    );
+
     const handleMouseMove = (e) => {
       const x = e.clientX;
       const y = e.clientY;
@@ -124,8 +142,12 @@ const Parallax = () => {
           className="mid-layer absolute w-full -h-full object-cover opacity-70 z-10"
         />
 
-        <h1 className="front-layer text-6xl font-bold text-center z-20">
-          Explore
+        <h1 className="front-layer text-6xl font-bold z-20 flex flex-wrap">
+          {"Explore".split("").map((char, i) => (
+            <span key={i} className="char inline-block">
+              {char}
+            </span>
+          ))}
         </h1>
       </section>
       <section className="h-screen flex items-center justify-center">
